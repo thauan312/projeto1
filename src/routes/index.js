@@ -11,7 +11,7 @@ const MainNavigator = createStackNavigator({
     Feed
 },{
     defaultNavigationOptions: {
-        headerTitle: <Text>RECLAME GBI</Text>,
+        headerTitle: <Text>RECLAME GUANAMBI</Text>,
         headerLeft: (
             <TouchableOpacity style={{ marginLeft: 20, }}>
                 <Image source={camera} />
