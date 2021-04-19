@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import * as Location from 'expo-location';
 
-import options from '../../../assets/options.png'
-import like from '../../../assets/like.png'
-import comment from '../../../assets/comment.png'
+import options from '../../../assets/options.png';
+import like from '../../../assets/like.png';
+import comment from '../../../assets/comment.png';
 
 
 function Feed(){
@@ -34,6 +35,31 @@ function Feed(){
             place: 'To nem aí'
         }
     ];
+
+    const [errorMsg, setErrorMsg] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+
+        (async ()=>{
+            let { status } = await Location.requestPermissionsAsync();
+
+
+            if(status !== 'granted'){
+                setErrorMsg('Permissão negada para acessar a localização');
+                setLoading(false);
+                return;
+            }
+
+            let location = await Location.getCurrentPositionAsync({});
+            console.log(location);
+
+        })();
+
+    }, []);
+
+
+
     function renderItem({ item: post }){
         return(
             <View style={styles.post}>
