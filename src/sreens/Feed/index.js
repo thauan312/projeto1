@@ -15,7 +15,7 @@ function Feed(){
             autor:'thauan.a',
             foto_url: 'https://avozdaserra.com.br/sites/default/files/noticias/cinema_0.png',
             likes: '236',
-            descricao: 'Dia de cinema',
+            descricao: 'Delimitado pelo oceano Atlântico a leste, o Brasil tem um litoral de 7 491 km.[12] O país faz fronteira com todos os outros países sul-americanos, exceto Chile e Equador, sendo limitado a norte pela Venezuela, Guiana, Suriname e pelo departamento ultramarino francês da Guiana Francesa; a noroeste pela Colômbia; a oeste pela Bolívia e Peru; a sudoeste pela Argentina e Paraguai e ao sul pelo Uruguai. Vários arquipélagos formam parte do território brasileiro, como o Atol das Rocas, o Arquipélago de São Pedro e São Paulo, Fernando de Noronha (o único destes habitado por civis) e Trindade e Martim Vaz.[12] O Brasil também é o lar de uma diversidade de animais selvagens, ecossistemas e de vastos recursos naturais em uma grande variedade de habitats protegidos',
             place: 'Cinema do Shopping'
         },
         {
@@ -126,10 +126,16 @@ const styles = StyleSheet.create({
 
     },
     post: {
-        marginVertical: 15
+        marginVertical: 7,
+        marginHorizontal: 10,
+        backgroundColor:'#fff',
+        borderRadius: 15
+
     },
     postOptions: {},
-    userInfo: {},
+    userInfo: {
+        marginTop:7
+    },
     autor: {
         fontSize: 14,
         color: '#000',
@@ -140,8 +146,10 @@ const styles = StyleSheet.create({
         color: '#666' 
     },
     foto_url: {
-        width: '100%',
-        height: 400
+        width: '90%',
+        height: 400,
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     footer: {
         paddingHorizontal: 15
