@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView} from 'react-native';
+import { Text, SafeAreaView, TouchableOpacity, View, StyleSheet} from 'react-native';
 
 import Routes from './src/routes';
 

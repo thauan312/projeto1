@@ -1,32 +1,33 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, Button, View, Text } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Button, View, Text, TouchableOpacity } from "react-native";
 
-const UselessTextInput = () => {
-  const [text, onChangeText] = React.useState(null);
 
-  return (
-    <SafeAreaView>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        placeholder="Dê mais detalhes"
-        value={text}
-      />
-      <Button
-        title="Avançar"
-        onPress=''
-
-      />
-    </SafeAreaView>
-  );
-};
+export default function upload() {
+    return(
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Escolher imagem</Text>
+            </TouchableOpacity>
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-  },
-});
+    container:{
+        flex : 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    button: {
+        width: 150,
+        height: 50,
+        borderRadius: 3,
+        backgroundColor: '#f6f5',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttonText:{
+        color: '#fff',
+    }
 
-export default UselessTextInput;
+})
