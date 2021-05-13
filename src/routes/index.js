@@ -4,14 +4,15 @@ import { createAppContainer } from 'react-navigation';
 import {  createStackNavigator } from 'react-navigation-stack';
 
 import Feed from '../sreens/Feed';
+import Publi from '../sreens/Publi'
 
 import camera from '../../assets/camera.png';
 
 const MainNavigator = createStackNavigator({
-    Feed
+    Publi
 },{
     defaultNavigationOptions: {
-        headerTitle: <Text>RECLAME GUANAMBI</Text>,
+        headerTitle: <Text>FISCALIZE GUANAMBI</Text>,
         headerLeft: (
             <TouchableOpacity style={{ marginLeft: 20, }}>
                 <Image source={camera} />
